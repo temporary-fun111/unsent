@@ -1,0 +1,143 @@
+🚀 UNSENT MVP - WEEK 1 - QUICKSTART
+
+✅ PROJECT IS READY TO RUN!
+
+📋 WHAT WAS BUILT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Next.js app structure (TypeScript + Tailwind)
+✓ Supabase client configured
+✓ Landing page with waitlist form
+✓ Google OAuth login flow
+✓ Message vault (list, create, edit, delete)
+✓ Settings & logout
+✓ Pink design theme with full styling
+✓ RLS security policies for Supabase
+✓ Environment variables template
+
+📁 FOLDER STRUCTURE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+unsent/
+├── src/app/
+│   ├── (marketing)/page.tsx       ← Landing + waitlist
+│   ├── (auth)/login/page.tsx      ← Google login
+│   ├── auth/callback/page.tsx     ← OAuth handler
+│   ├── (app)/
+│   │   ├── layout.tsx             ← App nav
+│   │   ├── vault/page.tsx         ← List messages
+│   │   ├── write/page.tsx         ← Create message
+│   │   ├── m/[id]/page.tsx        ← Edit message
+│   │   └── settings/page.tsx      ← Logout
+│   └── layout.tsx                 ← Root layout
+├── src/lib/supabase/client.ts
+├── .env.local                     ← ADD YOUR KEYS HERE
+└── SETUP_GUIDE.md                 ← Full setup instructions
+
+🔑 NEXT STEPS (DO THIS NOW):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ CREATE SUPABASE PROJECT
+   → Go to supabase.com
+   → Create a new project
+   → Copy Project URL and Anon Key
+
+2️⃣ CREATE DATABASE TABLES
+   → Open Supabase SQL Editor
+   → Copy-paste BOTH SQL blocks from SETUP_GUIDE.md
+   → Run them
+
+3️⃣ CONFIGURE SUPABASE AUTH
+   → Supabase → Authentication → URL Configuration
+   → Site URL: http://localhost:3000
+   → Redirect URL: http://localhost:3000/auth/callback
+
+4️⃣ (OPTIONAL) SET UP GOOGLE OAUTH
+   → Read "Enable Google OAuth" section in SETUP_GUIDE.md
+   → Need Google Cloud project credentials
+
+5️⃣ ADD ENV VARIABLES
+   → Edit .env.local
+   → Fill in NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+6️⃣ RUN LOCALLY
+   → npm run dev
+   → Visit http://localhost:3000
+
+7️⃣ TEST IT
+   → Landing page loads
+   → Try waitlist form
+   → Click "Open App" → /login
+   → Google login (or manual URL to /vault if Google not set up)
+   → Create a message
+   → See it in vault
+   → Edit/delete it
+
+🌐 DEPLOYMENT TO VERCEL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Push to GitHub: git add . && git commit -m "Week 1 MVP" && git push
+2. Deploy on Vercel: vercel.com → Import repo → Deploy
+3. Add env vars in Vercel settings
+4. Update Supabase URLs for your Vercel domain
+5. Update Google OAuth for Vercel domain
+
+📚 DETAILED INSTRUCTIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Read SETUP_GUIDE.md for:
+✓ Complete setup walkthrough
+✓ All SQL scripts
+✓ Google OAuth setup
+✓ Vercel deployment steps
+✓ Testing checklist
+✓ Common issues & fixes
+
+🎨 DESIGN SYSTEM:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary Pink: #FF4DA6
+Soft Pink:    #FFD1E6
+Cream BG:     #FFF7FB
+Text:         #1F1F1F
+Border:       #F3B6D3
+All using Tailwind CSS with hardcoded colors (no extra deps)
+
+🎯 FEATURES INCLUDED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Landing page + public waitlist form
+✅ Google OAuth (turn-key, just add Google credentials)
+✅ Message vault with full CRUD
+✅ Mood selector (Calm, Sad, Angry, Grateful, Confused, Loved)
+✅ Archive messages
+✅ Delete with confirmation
+✅ Settings + logout
+✅ Mobile responsive
+✅ All pages use pink theme
+
+🚫 NOT INCLUDED (Week 2+):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✗ Map integration
+✗ Message sharing
+✗ Public feed
+✗ Time capsule scheduling
+✗ Email OTP fallback
+✗ Account deletion
+✗ Data export
+
+❓ QUESTIONS?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+See SETUP_GUIDE.md for troubleshooting:
+✓ "Redirect URL mismatch" error
+✓ RLS policy violations
+✓ Messages not showing up
+✓ Login issues on Vercel
+
+💡 TIPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Use Supabase dashboard to test queries directly
+• Check RLS policies are enabled correctly
+• Test in incognito mode to verify auth flows
+• Use browser DevTools to debug API responses
+• All pages are "use client" so they're interactive
+
+🎉 YOU'RE READY TO BUILD!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The project is fully scaffolded. Just add your Supabase
+credentials and you're live. Happy coding! 💗
+
